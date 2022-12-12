@@ -102,6 +102,10 @@ class UserController {
       res.send({ status: "failed", message: "All Feild are Required" });
     }
   };
+
+     static loggedUserData = (req, res) => {
+    res.send({"user": req.user})
+  }
 }
 
 export default UserController;
